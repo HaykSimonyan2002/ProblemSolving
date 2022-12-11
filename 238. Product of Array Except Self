@@ -1,4 +1,4 @@
-#time complexity: O(n^2)!!!
+#time complexity: O(n^2)!?!?!?
 
 from math import prod
 class Solution:
