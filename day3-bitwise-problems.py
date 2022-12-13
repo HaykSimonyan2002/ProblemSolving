@@ -1,5 +1,5 @@
 #հաշվել թվի 1 արժեքով բիթերի քանակը
-def counter_func(num):
+def binarycounter(num):
     counter = 0
     while num >= 1:
       if num % 2 != 0:
