@@ -1,11 +1,12 @@
 #հաշվել թվի 1 արժեքով բիթերի քանակը
-def binarycounter(num):
-    count = 0
-    a = bin(num)[2:]
-    for i in a:
-      if i == "1":
-        count +=1
-    return count
+def counter_func(num):
+    counter = 0
+    while num >= 1:
+      if num % 2 != 0:
+        counter += 1
+      num //= 2
+    return counter
+
 
 
 #ստուգել թվի 1 արժեքով բիթերի քանակը կենտ է, թե զույգ
