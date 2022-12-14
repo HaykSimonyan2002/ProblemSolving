@@ -10,17 +10,19 @@ def binarycounter(num):
 
 
 #ստուգել թվի 1 արժեքով բիթերի քանակը կենտ է, թե զույգ
-def func(num):
-    if binarycounter(num) % 2 != 0: return "կենտ" # time = binarycounter time complexity
-    else: return "զույգ" # time = o(1)
-#time c. = O(binarycounter time complexity + 1) = O(n + divide t.c.)
+def func(num): # Out: True -> կենտ, False -> զույգ
+    if num == 0: return 0
+    else: 
+      bl = False
+      while num != 0:
+        if num & 1 == 1:
+          bl = not bl
+        num >>= 1
+    return bl
 
 #կատարել swap գործողություն թվի i և j բիթերը տեղափոխելու համար
 def swap(num, i, j):
-    new_num = list(bin(num)[2:]) # slice time: O(n), bin function time: O(log(n)), string to list time = O(n) => time: O(n)
-    print(new_num) # time O(1)
-    elem = new_num[-i]; new_num[-i] = new_num[-j]; new_num[-j] = elem # time: O(3) = O(1) ?
-    print(new_num) # time = O(1) 
+  
 
 
     
