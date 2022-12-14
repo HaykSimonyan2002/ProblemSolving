@@ -29,11 +29,4 @@ def swap(num, i, j):
 #շրջել թվի բիթերը(reverse), օրինակ՝ 11110000 -> 00001111
 
 def binaryreverse(num):
-    print(bin(num)) # time: O(log(n)
-    lst = [] # time: O(1)
-    for i in range(len(bin(num)[2:])): # O(n)
-      lst.append("1") # Amortize O(1)
-    lst = ''.join(lst) # O(n)
-    n = int(lst,2) # ?
-    num = (n ^ num) # O(log(n/(2^n)))
-    print(bin(num)) # O(log(n))
+
