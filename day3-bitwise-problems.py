@@ -1,12 +1,12 @@
 #հաշվել թվի 1 արժեքով բիթերի քանակը
 def binarycounter(num):
-    counter = 0 # time: O(1), space (0)
-    while num >= 1: # time O(n), space ?
-      if num % 2 != 0: # time O(1)
-        counter += 1 # time O(1) 
-      num //= 2 # time ?, space O(1)
-    return counter # time O(1), space 0?
-# time complexity = O(n + divide t.c.)
+  count = 0
+  while num != 0:
+    if num & 1 == 1:
+      count += 1
+    num >>= 1
+  return count
+# time: O(log(n)), space: O(1)
 
 
 #ստուգել թվի 1 արժեքով բիթերի քանակը կենտ է, թե զույգ
