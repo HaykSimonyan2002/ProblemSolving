@@ -27,3 +27,5 @@ class Solution:
                     head = head.next
                 else: return None
         return head
+
+    
