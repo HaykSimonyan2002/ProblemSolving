@@ -25,16 +25,11 @@ class Solution:
                 itemB = itemB.next  
             print(countB)
             
-            # Ok
 
 
             itemA = headA
             itemB = headB
                     
-
-
-            # Problem
-            # !!!!!!
             
             if countA > countB:
                 while countA > countB:
