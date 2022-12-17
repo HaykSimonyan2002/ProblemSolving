@@ -3,8 +3,51 @@
 #If the two linked lists have no intersection at all, return null.
 
 
+#Make changes, finish this ...
+
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+        if not (headA and headB): return None
+        countA = countB = 1
+        itemA = headA
+        itemB = headB
+        while itemA.next:
+            countA += 1
+            itemA = itemA.next
+        print("countA ", countA)
+        while itemB.next:
+            countB += 1
+            itemB = itemB.next
+        print("countB ", countB)
+        
+        if itemA != itemB:
+            print("itemA.val != itemB.val")
+            return None
+        
+        itemA = headA
+        itemB = headB
+        print("itemA ", itemA)
+        print("itemB ", itemB)
+        delta = 0
+        if countA > countB:
+            delta = countA - countB
+            item_max = headA
+            item_min = headB
 
 
+
+        elif countA < countB:
+            delta = countB - countA 
+            item_max = headB
+            item_min = headA
+            
+        while delta != 0:
+            item_max = item_max.next
+            delta -= 1
+        while item_max != item_min:
+            item_max = item_max.next
+            item_min = item_min.next
+        return item_min
 
 # Bad time complextiy
 
