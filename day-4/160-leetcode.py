@@ -2,8 +2,9 @@
 #return the node at which the two lists intersect. 
 #If the two linked lists have no intersection at all, return null.
 
+# Bad time complextiy
 
-#Make changes, finish this ...
+# First version
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
@@ -29,6 +30,8 @@ class Solution:
         print("itemA ", itemA)
         print("itemB ", itemB)
         delta = 0
+
+        
         if countA > countB:
             delta = countA - countB
             item_max = headA
@@ -40,6 +43,10 @@ class Solution:
             delta = countB - countA 
             item_max = headB
             item_min = headA
+        else:
+            delta = 0
+            item_max = headA
+            item_min = headB
             
         while delta != 0:
             item_max = item_max.next
@@ -49,9 +56,7 @@ class Solution:
             item_min = item_min.next
         return item_min
 
-# Bad time complextiy
-
-# First version
+#Second version
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
@@ -108,7 +113,7 @@ class Solution:
                         
                         
                         
-# Second version
+# Third version
 
 
 
